@@ -1,0 +1,18 @@
+version: "3"
+services:
+  mysql:
+    # Sakai requires the database to use UTF-8.
+    command: --character-set-server=utf8
+    environment:
+      # See https://docs.docker.com/samples/library/mysql/#environment-variables
+      MYSQL_DATABASE: sakai
+      MYSQL_USER: sakai
+      MYSQL_PASSWORD: sakaipass
+      MYSQL_ROOT_PASSWORD: rootpass
+    image: mysql:5.7
+  sakai:
+    depends_on:
+      - mysql
+    build: .
+    ports:
+      - "8080:8080"
