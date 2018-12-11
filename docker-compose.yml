@@ -11,13 +11,14 @@ services:
       MYSQL_ROOT_PASSWORD: rootpass
     image: mysql:5.7
   sakai:
+    build: .
+    depends_on:
+      - mysql
     environment:
       DATABASE_HOST: mysql:3306
       DATABASE_NAME: sakai
       DATABASE_USER: sakai
       DATABASE_PASSWORD: sakaipass
-    depends_on:
-      - mysql
-    build: .
+    image: hypothesis/sakai:latest
     ports:
       - "8080:8080"
