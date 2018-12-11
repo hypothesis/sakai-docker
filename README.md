@@ -53,6 +53,14 @@ To test an LTI tool, you will need to:
 8. Register a new LMS application instance at https://hypothes.is/welcome
    and enter the launch URL, and consumer key and secret in Sakai.
 
+## Troubleshooting
+
+If you have problems building or running the Docker container on macOS, you may
+need to increase the memory allowance for Docker Engine up from the default of
+2GB to 3GB or more.
+
+This can be done in the "Advanced" section of Docker for Mac's Preferences UI.
+
 ## References
 
 [Quick Start from Source](https://github.com/sakaiproject/sakai/wiki/Quick-Start-from-Source)
