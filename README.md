@@ -29,7 +29,7 @@ first time it will spend several minutes initializing.
 ## Logging into Sakai
 
 Once the Sakai container image has been built and the container is created,
-you can access Sakai by browsing to http://localhost:8080.
+you can access Sakai by browsing to http://localhost:8080/portal.
 
 The default admin user is `admin` and the password is `admin`.
 
