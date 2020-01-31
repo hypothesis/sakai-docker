@@ -14,7 +14,7 @@ RUN mvn install -Dmaven.test.skip=true -DskipTests
 
 # Download and install Apache Tomcat.
 RUN mkdir -p /opt/tomcat
-RUN curl "http://apache.mirror.anlx.net/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz" > /opt/tomcat/tomcat.tar.gz
+RUN curl "http://apache.mirror.anlx.net/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz" > /opt/tomcat/tomcat.tar.gz
 RUN tar -C /opt/tomcat -xf /opt/tomcat/tomcat.tar.gz --strip-components 1
 
 # Configure Tomcat.
